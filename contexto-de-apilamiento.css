@@ -1,0 +1,227 @@
+body{
+  counter-reset: score;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+h3{
+  text-shadow: 2px 4px 8px rgba(255,255,255,0.6);
+}
+
+/*Counter*/
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  appearance: none;
+  cursor: pointer;
+  width: 100%;
+  z-index: 20;
+  aspect-ratio: 1;
+}
+input[type="checkbox"]:checked {
+  counter-increment: score;
+}
+.total-count::after{
+  content: counter(score);
+}
+
+/*Phone*/
+.phone{
+  position: relative;
+  border: 1vmin solid black;
+  border-radius: 5vmin;
+  height: 80vmin;
+  width: 45vmin;
+  background-image: url(https://i.pinimg.com/originals/86/2d/7a/862d7a81809117f8670a59d7811d2fc7.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  overflow: hidden;
+  box-shadow: 3px 14px 30px 0px rgba(0,0,0,0.75);
+}
+.title{
+  display: flex;	
+}
+.title img{
+	margin: 0 auto;
+  width: 100px;
+}
+.layer{
+  bottom: 0;
+	position: absolute;
+}
+
+/*Animation*/
+@keyframes moveUP {
+  0%{
+    bottom: 0;
+  }
+  25%{
+    bottom: -12vmin;
+  }
+  50%{
+    bottom: 2vmin;
+  }
+  75%{
+    bottom: -6vmin;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+@keyframes moveBottom {
+  0%{
+    bottom: -12vmin;
+  }
+  50%{
+    bottom: 0;
+  }
+  100%{
+    bottom: -12vmin;
+  }
+}
+
+/*Players*/
+.head{
+  position: relative;
+  width:10vmin;
+  height:10vmin;
+  border-radius:50%;
+  border: solid 0.5vmin black;
+  background-color: #ee1e87;
+}
+.mask{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 8vmin;
+  width: 8vmin;
+  background-color: black;
+  border-radius: 50%;
+}
+.square{
+  height: 3vmin;
+  width: 3vmin;
+  margin: 2vmin auto 0;
+  border: solid 0.4vmin white;
+}
+.circle{
+  height: 3vmin;
+  width: 3vmin;
+  margin: 1vmin auto 0;
+  border-radius: 50%;
+  border: solid 0.4vmin white;
+}
+.triangle{
+  height: 0;
+  width: 0;
+  margin: 1vmin auto 0;
+  border-left: solid 2vmin transparent;
+  border-right: solid 2vmin transparent;
+  border-bottom: solid 3vmin white;
+}
+.body{
+  position: absolute;
+  top: 9vmin;
+  height: 5vmin;
+  width: 100%;
+  border: solid 3px black;
+  border-radius:  2vmin 2vmin 0 0;
+  background-color: #ee1e87;
+  overflow: hidden;
+}
+.body:after,
+.body:before{
+  content:'';
+  position: absolute;
+  height: 6vmin;
+  width: 1vmin;
+  background-color: black;
+}
+.body:after{
+  top: -1vmin;
+  right: 2vmin;
+  transform: rotate(30deg);
+}
+.body:before{
+  top: -1vmin;
+  left: 2vmin;
+  transform: rotate(-30deg);
+}
+.layer-1,
+.layer-2{
+  height: 68vmin;
+  width: 10vmin;
+}
+.layer-1{
+  right: 10vmin;
+	z-index: 1;
+  animation: moveUP 1.5s ease-in-out alternate infinite;
+}
+.layer-2{
+  left: 10vmin;
+	z-index: 1;
+  animation: moveBottom 1.2s ease-in-out alternate infinite;
+}
+.layer-4{
+  left: 8vmin;
+  height: 45vmin;
+  width: 10vmin;
+	z-index: 4;
+  animation: moveUP 1.2s ease-in-out alternate infinite;
+}
+.layer-6{
+  right: 10vmin;
+  height: 32vmin;
+  width: 10vmin;
+	z-index: 6;
+  animation: moveBottom 1s ease-in-out alternate infinite;
+}
+
+/*wall*/
+.layer-3,
+.layer-5,
+.layer-7{
+  display: grid;
+  place-items: center;
+  padding: 5vmin;
+  border-radius: 2vmin 2vmin 0 0 ;
+  background-image: url(https://img.freepik.com/foto-gratis/textura-marron-clara-papel-kraft-fondo_8087-1877.jpg?size=626&ext=jpg&ga=GA1.2.1005559705.1635552000);
+  box-shadow: 2px 3px 23px -2px rgba(0,0,0,0.75);
+}
+.layer-3 img,
+.layer-5 img,
+.layer-7 img{
+	width: 100px;
+	margin: 0 auto;
+}
+.layer-3{
+  place-items: flex-start;
+  left: 0;
+  right:0;
+	bottom: 0;
+  margin: auto;
+  height: 46vmin;
+  width: 30vmin;
+	z-index: 3;
+}
+.layer-5{
+	place-items: flex-start;
+  height: 25vmin;
+  width: 30vmin;
+	bottom: 0;
+	z-index: 5;
+}
+.layer-7{
+	place-items: flex-start;
+  right:0;
+  height: 10vmin;
+  width: 30vmin;
+	bottom: 0;
+	z-index: 7;
+}
