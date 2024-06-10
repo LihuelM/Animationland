@@ -5,6 +5,6 @@ Videojuego web realizado con en Curso de Animaciones con CSS. Se desarrollan fun
 
 ------------
 
-Demo del proyecto: 
+Demo del proyecto: https://lihuelm.github.io/Animationland/
 
 -------
