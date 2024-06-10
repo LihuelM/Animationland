@@ -8,3 +8,6 @@ Videojuego web realizado con en Curso de Animaciones con CSS. Se desarrollan fun
 Demo del proyecto: https://lihuelm.github.io/Animationland/
 
 -------
+
+![image](https://github.com/LihuelM/Animationland/assets/110037132/f4f09630-e1ce-4cb7-9ec3-a68b1d51e119)
+
